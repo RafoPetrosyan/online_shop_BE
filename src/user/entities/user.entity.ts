@@ -7,6 +7,8 @@ import {
   OneToMany,
 } from 'typeorm';
 import { Article } from '../../article/entities/article.entity';
+import { Cart } from '../../cart/entities/cart.entity';
+import { Order } from '../../order/entities/order.entity';
 
 @Entity('user')
 export class User {
@@ -40,4 +42,10 @@ export class User {
 
   @OneToMany(() => Article, (article) => article.user)
   articles?: Article[];
+
+  @OneToMany(() => Cart, (cart) => cart.user)
+  carts?: Cart[];
+
+  @OneToMany(() => Order, (order) => order.cart)
+  orders: Order[];
 }
