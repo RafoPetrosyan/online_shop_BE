@@ -26,7 +26,7 @@ export class Cart {
   @UpdateDateColumn({ name: 'updated_at', type: 'timestamp' })
   updated_at: Date;
 
-  @ManyToOne(() => User, (user) => user.articles, { eager: true })
+  @ManyToOne(() => User, (user) => user.carts)
   @JoinColumn({ name: 'user_id' })
   user: User;
 

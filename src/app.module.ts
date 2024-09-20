@@ -6,7 +6,6 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { RedisModule } from './redis/redis.module';
 import { AuthModule } from './auth/auth.module';
-import { ArticleModule } from './article/article.module';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { CartItemModule } from './cart_item/cart_item.module';
@@ -28,7 +27,6 @@ import typeorm from './config/typeorm';
     UserModule,
     RedisModule,
     AuthModule,
-    ArticleModule,
     ProductModule,
     CartModule,
     CartItemModule,

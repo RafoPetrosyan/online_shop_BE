@@ -6,7 +6,6 @@ import {
   UpdateDateColumn,
   OneToMany,
 } from 'typeorm';
-import { Article } from '../../article/entities/article.entity';
 import { Cart } from '../../cart/entities/cart.entity';
 import { Order } from '../../order/entities/order.entity';
 
@@ -39,9 +38,6 @@ export class User {
 
   @UpdateDateColumn({ name: 'updated_at', type: 'timestamp' })
   updated_at: Date;
-
-  @OneToMany(() => Article, (article) => article.user)
-  articles?: Article[];
 
   @OneToMany(() => Cart, (cart) => cart.user)
   carts?: Cart[];
